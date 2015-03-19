@@ -30,7 +30,8 @@ public class AppTest {
 	AndroidDriver driver;
 
 	@BeforeTest
-	public void setUp() throws MalformedURLException {
+	public void setUp() throws IOException {
+		Runtime.getRuntime().exec("node E:\\Software\\Appiumnode_modules\\appium");
 		System.out.println("-------------Test Started-----------------");
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setCapability("deviceName", "XiomiHM Note");
