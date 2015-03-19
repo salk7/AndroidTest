@@ -31,10 +31,17 @@ public class AppTest {
 	AndroidDriver driver;
 	Process appium ;
 	@BeforeTest
-	public void setUp() throws IOException {
-		appium= Runtime.getRuntime().exec("cmd node E:\\Software\\Appium\\node_modules\\appium");
-		System.out.println("------------------Appium server started-------------------");
+	public void setUp() throws IOException {try
+	{		appium= Runtime.getRuntime().exec("cmd node E:\\Software\\Appium\\node_modules\\appium");
+	System.out.println("------------------Appium server started-------------------");
+	}
+	catch(Exception e)
+	{
+		System.out.println(e.getMessage());
+		appium.destroy();
+	}
 		System.out.println("-------------Test Started-----------------");
+		try{
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setCapability("deviceName", "XiomiHM Note");
 		capabilities.setCapability(CapabilityType.VERSION, "4.4.2");
@@ -45,6 +52,12 @@ public class AppTest {
 		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"),
 				capabilities);
 		driver.manage().timeouts().implicitlyWait(30L, TimeUnit.SECONDS);
+		}
+		catch (Exception e)
+		{
+			appium.destroy();
+			System.out.println(e.getMessage());
+		}
 	}
 
 	public String[] lessThan24() {
