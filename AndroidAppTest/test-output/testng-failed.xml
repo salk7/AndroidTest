@@ -6,7 +6,7 @@
       <class name="org.syed.zoomdroid.AppTest">
         <methods>
           <include name="locationName"/>
-          <include name="tearDown"/>
+          <include name="within24Booking"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- org.syed.zoomdroid.AppTest -->

@@ -33,6 +33,7 @@ public class AppTest {
 	@BeforeTest
 	public void setUp() throws IOException {
 		appium= Runtime.getRuntime().exec("cmd node E:\\Software\\Appium\\node_modules\\appium");
+		System.out.println("------------------Appium server started-------------------");
 		System.out.println("-------------Test Started-----------------");
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setCapability("deviceName", "XiomiHM Note");
@@ -144,7 +145,8 @@ public class AppTest {
 	}
 
 	@Test(enabled=true)
-	public void locationName() throws InterruptedException {
+	public void locationName() throws Exception {
+		
 		WebElement LocMenu;
 		String cities[]={"Bangalore","Pune","Delhi NCR"};
 		String locText=null;
@@ -152,9 +154,9 @@ public class AppTest {
 		LocMenu = driver.findElement(By.id("com.zoomcar:id/textViewCityLocation"));
 		for (int i = 0; i < cities.length; i++) {
 			LocMenu.click();
-			
 			listElements("com.zoomcar:id/textViewLocationName",cities[i],false);
 			swipeLR();
+			Thread.sleep(2000);
 			locText=LocMenu.getText();
 			Assert.assertEquals(locText,cities[i] );
 //			continue;
@@ -210,7 +212,7 @@ public class AppTest {
 		driver.quit();
 		System.out.println("---------------------End of test--------------");
 		appium.destroy();
-		System.out.println("------------appium destroyed------------------");
+		System.out.println("------------appium server destroyed------------------");
 //		Thread.sleep(10000);
 	}
 }
