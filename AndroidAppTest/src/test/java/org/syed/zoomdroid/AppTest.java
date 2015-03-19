@@ -1,4 +1,5 @@
 package org.syed.zoomdroid;
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 
 import java.io.File;
@@ -28,10 +29,10 @@ import org.testng.annotations.Test;
 
 public class AppTest {
 	AndroidDriver driver;
-
+	Process appium ;
 	@BeforeTest
 	public void setUp() throws IOException {
-		Runtime.getRuntime().exec("cmd node E:\\Software\\Appiumnode_modules\\appium");
+		appium= Runtime.getRuntime().exec("cmd node E:\\Software\\Appium\\node_modules\\appium");
 		System.out.println("-------------Test Started-----------------");
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setCapability("deviceName", "XiomiHM Note");
@@ -208,6 +209,8 @@ public class AppTest {
 	public void tearDown() throws InterruptedException {
 		driver.quit();
 		System.out.println("---------------------End of test--------------");
+		appium.destroy();
+		System.out.println("------------appium destroyed------------------");
 //		Thread.sleep(10000);
 	}
 }
