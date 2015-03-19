@@ -31,7 +31,7 @@ public class AppTest {
 
 	@BeforeTest
 	public void setUp() throws IOException {
-		Runtime.getRuntime().exec("node E:\\Software\\Appiumnode_modules\\appium");
+//		Runtime.getRuntime().exec("node E:\\Software\\Appiumnode_modules\\appium");
 		System.out.println("-------------Test Started-----------------");
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setCapability("deviceName", "XiomiHM Note");
