@@ -1,5 +1,5 @@
 package org.syed.zoomdroid;
-import io.appium.java_client.AppiumDriver;
+//import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 
 import java.io.File;
@@ -34,12 +34,7 @@ public class AppTest {
 	public void setUp() throws IOException {try
 	{		appium= Runtime.getRuntime().exec("cmd node E:\\Software\\Appium\\node_modules\\appium");
 	System.out.println("------------------Appium server started-------------------");
-	}
-	catch(Exception e)
-	{
-		System.out.println(e.getMessage());
-		appium.destroy();
-	}
+	
 		System.out.println("-------------Test Started-----------------");
 		try{
 		DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -55,9 +50,16 @@ public class AppTest {
 		}
 		catch (Exception e)
 		{
-			appium.destroy();
+//			appium.destroy();
 			System.out.println(e.getMessage());
 		}
+		}
+	catch(Exception e)
+	{
+		System.out.println(e.getMessage());
+		appium.destroy();
+		System.out.println("exit no :"+appium.exitValue());
+	}
 	}
 
 	public String[] lessThan24() {
@@ -222,8 +224,10 @@ public class AppTest {
 
 	@AfterTest
 	public void tearDown() throws InterruptedException {
+		if(driver!=null)
 		driver.quit();
 		System.out.println("---------------------End of test--------------");
+		if(appium!=null)
 		appium.destroy();
 		System.out.println("------------appium server destroyed------------------");
 //		Thread.sleep(10000);
