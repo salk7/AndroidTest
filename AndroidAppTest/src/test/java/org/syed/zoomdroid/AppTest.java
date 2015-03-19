@@ -27,7 +27,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class App10est {
+public class AppTest {
 	AndroidDriver driver;
 	Process appium ;
 	@BeforeTest
