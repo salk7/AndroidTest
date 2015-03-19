@@ -33,6 +33,7 @@ public class AppTest {
 	@BeforeTest
 	public void setUp() throws IOException {try
 	{		appium= Runtime.getRuntime().exec("cmd node E:\\Software\\Appium\\node_modules\\appium");
+			Thread.sleep(5000);
 	System.out.println("------------------Appium server started-------------------");
 	
 		System.out.println("-------------Test Started-----------------");
