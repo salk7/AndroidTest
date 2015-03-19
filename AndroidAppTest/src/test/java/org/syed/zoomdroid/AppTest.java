@@ -27,13 +27,13 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class AppTest {
+public class App10est {
 	AndroidDriver driver;
 	Process appium ;
 	@BeforeTest
 	public void setUp() throws IOException {try
 	{		appium= Runtime.getRuntime().exec("cmd node E:\\Software\\Appium\\node_modules\\appium");
-			Thread.sleep(5000);
+			Thread.sleep(10000);
 	System.out.println("------------------Appium server started-------------------");
 	
 		System.out.println("-------------Test Started-----------------");
