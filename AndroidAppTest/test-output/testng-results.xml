@@ -1,29 +1,233 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
-  <reporter-output>
-  </reporter-output>
-  <suite name="Default suite" duration-ms="97931" started-at="2015-03-20T06:45:28Z" finished-at="2015-03-20T06:47:06Z">
-    <groups>
-    </groups>
-    <test name="Default test" duration-ms="97931" started-at="2015-03-20T06:45:28Z" finished-at="2015-03-20T06:47:06Z">
-      <class name="org.syed.zoomdroid.AppTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:org.syed.zoomdroid.AppTest@599a4de1]" name="setUp" is-config="true" duration-ms="12475" started-at="2015-03-20T12:15:28Z" finished-at="2015-03-20T12:15:41Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="locationName()[pri:0, instance:org.syed.zoomdroid.AppTest@599a4de1]" name="locationName" duration-ms="42480" started-at="2015-03-20T12:15:41Z" finished-at="2015-03-20T12:16:23Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- locationName -->
-        <test-method status="PASS" signature="within24Booking()[pri:0, instance:org.syed.zoomdroid.AppTest@599a4de1]" name="within24Booking" duration-ms="42027" started-at="2015-03-20T12:16:23Z" finished-at="2015-03-20T12:17:05Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- within24Booking -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:org.syed.zoomdroid.AppTest@599a4de1]" name="tearDown" is-config="true" duration-ms="929" started-at="2015-03-20T12:17:05Z" finished-at="2015-03-20T12:17:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- org.syed.zoomdroid.AppTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+<testng-results skipped="0" failed="0" total="12" passed="12">
+	<reporter-output>
+	</reporter-output>
+	<suite name="Default suite" duration-ms="242641" started-at="2015-03-20T10:07:34Z"
+		finished-at="2015-03-20T10:11:36Z">
+		<groups>
+		</groups>
+		<test name="Default test" duration-ms="242641" started-at="2015-03-20T10:07:34Z"
+			finished-at="2015-03-20T10:11:36Z">
+			<class name="org.syed.zoomdroid.AppTest">
+				<test-method status="PASS"
+					signature="setUp()[pri:0, instance:org.syed.zoomdroid.AppTest@3a333bdb]"
+					name="setUp" is-config="true" duration-ms="11030" started-at="2015-03-20T15:37:34Z"
+					finished-at="2015-03-20T15:37:45Z">
+					<reporter-output>
+					</reporter-output>
+				</test-method> <!-- setUp -->
+				<test-method status="PASS"
+					signature="leftMenu(java.lang.String, java.lang.String)[pri:0, instance:org.syed.zoomdroid.AppTest@3a333bdb]"
+					name="leftMenu" duration-ms="37004" started-at="2015-03-20T15:37:45Z"
+					data-provider="getData" finished-at="2015-03-20T15:38:22Z">
+					<params>
+						<param index="0">
+							<value>
+                <![CDATA[Tariff]]>
+							</value>
+						</param>
+						<param index="1">
+							<value>
+                <![CDATA[Tariff Details]]>
+							</value>
+						</param>
+					</params>
+					<reporter-output>
+					</reporter-output>
+				</test-method> <!-- leftMenu -->
+				<test-method status="PASS"
+					signature="leftMenu(java.lang.String, java.lang.String)[pri:0, instance:org.syed.zoomdroid.AppTest@3a333bdb]"
+					name="leftMenu" duration-ms="13040" started-at="2015-03-20T15:38:22Z"
+					data-provider="getData" finished-at="2015-03-20T15:38:35Z">
+					<params>
+						<param index="0">
+							<value>
+                <![CDATA[Tariff]]>
+							</value>
+						</param>
+						<param index="1">
+							<value>
+                <![CDATA[Offers]]>
+							</value>
+						</param>
+					</params>
+					<reporter-output>
+					</reporter-output>
+				</test-method> <!-- leftMenu -->
+				<test-method status="PASS"
+					signature="leftMenu(java.lang.String, java.lang.String)[pri:0, instance:org.syed.zoomdroid.AppTest@3a333bdb]"
+					name="leftMenu" duration-ms="13715" started-at="2015-03-20T15:38:35Z"
+					data-provider="getData" finished-at="2015-03-20T15:38:48Z">
+					<params>
+						<param index="0">
+							<value>
+                <![CDATA[Tariff]]>
+							</value>
+						</param>
+						<param index="1">
+							<value>
+                <![CDATA[Upcoming Peak Season]]>
+							</value>
+						</param>
+					</params>
+					<reporter-output>
+					</reporter-output>
+				</test-method> <!-- leftMenu -->
+				<test-method status="PASS"
+					signature="leftMenu(java.lang.String, java.lang.String)[pri:0, instance:org.syed.zoomdroid.AppTest@3a333bdb]"
+					name="leftMenu" duration-ms="16560" started-at="2015-03-20T15:38:48Z"
+					data-provider="getData" finished-at="2015-03-20T15:39:05Z">
+					<params>
+						<param index="0">
+							<value>
+                <![CDATA[How It Works]]>
+							</value>
+						</param>
+						<param index="1">
+							<value>
+                <![CDATA[How to Zoom]]>
+							</value>
+						</param>
+					</params>
+					<reporter-output>
+					</reporter-output>
+				</test-method> <!-- leftMenu -->
+				<test-method status="PASS"
+					signature="leftMenu(java.lang.String, java.lang.String)[pri:0, instance:org.syed.zoomdroid.AppTest@3a333bdb]"
+					name="leftMenu" duration-ms="13797" started-at="2015-03-20T15:39:05Z"
+					data-provider="getData" finished-at="2015-03-20T15:39:19Z">
+					<params>
+						<param index="0">
+							<value>
+                <![CDATA[How It Works]]>
+							</value>
+						</param>
+						<param index="1">
+							<value>
+                <![CDATA[Zoom in Safety]]>
+							</value>
+						</param>
+					</params>
+					<reporter-output>
+					</reporter-output>
+				</test-method> <!-- leftMenu -->
+				<test-method status="PASS"
+					signature="leftMenu(java.lang.String, java.lang.String)[pri:0, instance:org.syed.zoomdroid.AppTest@3a333bdb]"
+					name="leftMenu" duration-ms="14100" started-at="2015-03-20T15:39:19Z"
+					data-provider="getData" finished-at="2015-03-20T15:39:33Z">
+					<params>
+						<param index="0">
+							<value>
+                <![CDATA[How It Works]]>
+							</value>
+						</param>
+						<param index="1">
+							<value>
+                <![CDATA[Going Outstation]]>
+							</value>
+						</param>
+					</params>
+					<reporter-output>
+					</reporter-output>
+				</test-method> <!-- leftMenu -->
+				<test-method status="PASS"
+					signature="leftMenu(java.lang.String, java.lang.String)[pri:0, instance:org.syed.zoomdroid.AppTest@3a333bdb]"
+					name="leftMenu" duration-ms="13195" started-at="2015-03-20T15:39:33Z"
+					data-provider="getData" finished-at="2015-03-20T15:39:46Z">
+					<params>
+						<param index="0">
+							<value>
+                <![CDATA[How It Works]]>
+							</value>
+						</param>
+						<param index="1">
+							<value>
+                <![CDATA[FAQs]]>
+							</value>
+						</param>
+					</params>
+					<reporter-output>
+					</reporter-output>
+				</test-method> <!-- leftMenu -->
+				<test-method status="PASS"
+					signature="leftMenu(java.lang.String, java.lang.String)[pri:0, instance:org.syed.zoomdroid.AppTest@3a333bdb]"
+					name="leftMenu" duration-ms="17355" started-at="2015-03-20T15:39:46Z"
+					data-provider="getData" finished-at="2015-03-20T15:40:03Z">
+					<params>
+						<param index="0">
+							<value>
+                <![CDATA[Policies]]>
+							</value>
+						</param>
+						<param index="1">
+							<value>
+                <![CDATA[Fee Policy]]>
+							</value>
+						</param>
+					</params>
+					<reporter-output>
+					</reporter-output>
+				</test-method> <!-- leftMenu -->
+				<test-method status="PASS"
+					signature="leftMenu(java.lang.String, java.lang.String)[pri:0, instance:org.syed.zoomdroid.AppTest@3a333bdb]"
+					name="leftMenu" duration-ms="13159" started-at="2015-03-20T15:40:03Z"
+					data-provider="getData" finished-at="2015-03-20T15:40:16Z">
+					<params>
+						<param index="0">
+							<value>
+                <![CDATA[Policies]]>
+							</value>
+						</param>
+						<param index="1">
+							<value>
+                <![CDATA[Eligibility]]>
+							</value>
+						</param>
+					</params>
+					<reporter-output>
+					</reporter-output>
+				</test-method> <!-- leftMenu -->
+				<test-method status="PASS"
+					signature="leftMenu(java.lang.String, java.lang.String)[pri:0, instance:org.syed.zoomdroid.AppTest@3a333bdb]"
+					name="leftMenu" duration-ms="13751" started-at="2015-03-20T15:40:16Z"
+					data-provider="getData" finished-at="2015-03-20T15:40:30Z">
+					<params>
+						<param index="0">
+							<value>
+                <![CDATA[Policies]]>
+							</value>
+						</param>
+						<param index="1">
+							<value>
+                <![CDATA[Privacy Policy]]>
+							</value>
+						</param>
+					</params>
+					<reporter-output>
+					</reporter-output>
+				</test-method> <!-- leftMenu -->
+				<test-method status="PASS"
+					signature="locationName()[pri:0, instance:org.syed.zoomdroid.AppTest@3a333bdb]"
+					name="locationName" duration-ms="31181" started-at="2015-03-20T15:40:30Z"
+					finished-at="2015-03-20T15:41:01Z">
+					<reporter-output>
+					</reporter-output>
+				</test-method> <!-- locationName -->
+				<test-method status="PASS"
+					signature="within24Booking()[pri:0, instance:org.syed.zoomdroid.AppTest@3a333bdb]"
+					name="within24Booking" duration-ms="33844" started-at="2015-03-20T15:41:01Z"
+					finished-at="2015-03-20T15:41:35Z">
+					<reporter-output>
+					</reporter-output>
+				</test-method> <!-- within24Booking -->
+				<test-method status="PASS"
+					signature="tearDown()[pri:0, instance:org.syed.zoomdroid.AppTest@3a333bdb]"
+					name="tearDown" is-config="true" duration-ms="859" started-at="2015-03-20T15:41:35Z"
+					finished-at="2015-03-20T15:41:36Z">
+					<reporter-output>
+					</reporter-output>
+				</test-method> <!-- tearDown -->
+			</class> <!-- org.syed.zoomdroid.AppTest -->
+		</test> <!-- Default test -->
+	</suite> <!-- Default suite -->
 </testng-results>

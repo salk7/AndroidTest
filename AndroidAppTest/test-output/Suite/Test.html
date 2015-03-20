@@ -1,12 +1,17 @@
 <html>
 <head>
-<title>TestNG:  Test</title>
+<title>TestNG: Test</title>
 <link href="../testng.css" rel="stylesheet" type="text/css" />
 <link href="../my-testng.css" rel="stylesheet" type="text/css" />
 
 <style type="text/css">
-.log { display: none;} 
-.stack-trace { display: none;} 
+.log {
+	display: none;
+}
+
+.stack-trace {
+	display: none;
+}
 </style>
 <script type="text/javascript">
 <!--
@@ -53,30 +58,48 @@ function toggleAllBoxes() {
 
 </head>
 <body>
-<h2 align='center'>Test</h2><table border='1' align="center">
-<tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/2/0</td>
-</tr><tr>
-<td>Started on:</td><td>Thu Mar 19 18:13:01 IST 2015</td>
-</tr>
-<tr><td>Total time:</td><td>110 seconds (110574 ms)</td>
-</tr><tr>
-<td>Included groups:</td><td></td>
-</tr><tr>
-<td>Excluded groups:</td><td></td>
-</tr>
-</table><p/>
-<small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='org.syed.zoomdroid.AppTest.locationName()'><b>locationName</b><br>Test class: org.syed.zoomdroid.AppTest</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+	<h2 align='center'>Test</h2>
+	<table border='1' align="center">
+		<tr>
+			<td>Tests passed/Failed/Skipped:</td>
+			<td>0/2/0</td>
+		</tr>
+		<tr>
+			<td>Started on:</td>
+			<td>Thu Mar 19 18:13:01 IST 2015</td>
+		</tr>
+		<tr>
+			<td>Total time:</td>
+			<td>110 seconds (110574 ms)</td>
+		</tr>
+		<tr>
+			<td>Included groups:</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Excluded groups:</td>
+			<td></td>
+		</tr>
+	</table>
+	<p />
+	<small><i>(Hover the method name to see the test class
+			name)</i></small>
+	<p />
+	<table width='100%' border='1' class='invocation-failed'>
+		<tr>
+			<td colspan='4' align='center'><b>FAILED TESTS</b></td>
+		</tr>
+		<tr>
+			<td><b>Test method</b></td>
+			<td width="30%"><b>Exception</b></td>
+			<td width="10%"><b>Time (seconds)</b></td>
+			<td><b>Instance</b></td>
+		</tr>
+		<tr>
+			<td title='org.syed.zoomdroid.AppTest.locationName()'><b>locationName</b><br>Test
+				class: org.syed.zoomdroid.AppTest</td>
+			<td><div>
+					<pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 13.08 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf323ce037c5f92db6c1bba601c2ac43ad8&apos;, time: &apos;2014-10-23 13:11:40&apos;
@@ -94,8 +117,13 @@ Capabilities [{platform=LINUX, javascriptEnabled=true, androidPackage=com.zoomca
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:745)
-... Removed 14 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace743690211", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace743690211'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+... Removed 14 stack frames</pre>
+				</div>
+				<a href='#'
+				onClick='toggleBox("stack-trace743690211", this, "Click to show all stack frames", "Click to hide stack frames")'>Click
+					to show all stack frames</a>
+				<div class='stack-trace' id='stack-trace743690211'>
+					<pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 13.08 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf323ce037c5f92db6c1bba601c2ac43ad8&apos;, time: &apos;2014-10-23 13:11:40&apos;
@@ -127,12 +155,16 @@ Capabilities [{platform=LINUX, javascriptEnabled=true, androidPackage=com.zoomca
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:745)
-</pre></div></td>
-<td>26</td>
-<td>org.syed.zoomdroid.AppTest@726b37ad</td></tr>
-<tr>
-<td title='org.syed.zoomdroid.AppTest.within24Booking()'><b>within24Booking</b><br>Test class: org.syed.zoomdroid.AppTest</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+</pre>
+				</div></td>
+			<td>26</td>
+			<td>org.syed.zoomdroid.AppTest@726b37ad</td>
+		</tr>
+		<tr>
+			<td title='org.syed.zoomdroid.AppTest.within24Booking()'><b>within24Booking</b><br>Test
+				class: org.syed.zoomdroid.AppTest</td>
+			<td><div>
+					<pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 30.69 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf323ce037c5f92db6c1bba601c2ac43ad8&apos;, time: &apos;2014-10-23 13:11:40&apos;
@@ -152,8 +184,13 @@ Capabilities [{platform=LINUX, javascriptEnabled=true, androidPackage=com.zoomca
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:745)
-... Removed 14 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace5229420", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace5229420'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+... Removed 14 stack frames</pre>
+				</div>
+				<a href='#'
+				onClick='toggleBox("stack-trace5229420", this, "Click to show all stack frames", "Click to hide stack frames")'>Click
+					to show all stack frames</a>
+				<div class='stack-trace' id='stack-trace5229420'>
+					<pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 30.69 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf323ce037c5f92db6c1bba601c2ac43ad8&apos;, time: &apos;2014-10-23 13:11:40&apos;
@@ -187,9 +224,12 @@ Capabilities [{platform=LINUX, javascriptEnabled=true, androidPackage=com.zoomca
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:745)
-</pre></div></td>
-<td>90</td>
-<td>org.syed.zoomdroid.AppTest@726b37ad</td></tr>
-</table><p>
+</pre>
+				</div></td>
+			<td>90</td>
+			<td>org.syed.zoomdroid.AppTest@726b37ad</td>
+		</tr>
+	</table>
+	<p>
 </body>
 </html>

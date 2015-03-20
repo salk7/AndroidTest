@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="4" name="Failed suite [Suite]" parallel="methods">
-  <test name="Test(failed)" parallel="methods">
-    <classes>
-      <class name="org.syed.zoomdroid.AppTest">
-        <methods>
-          <include name="locationName"/>
-          <include name="tearDown"/>
-          <include name="within24Booking"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- org.syed.zoomdroid.AppTest -->
-    </classes>
-  </test> <!-- Test(failed) -->
+	<test name="Test(failed)" parallel="methods">
+		<classes>
+			<class name="org.syed.zoomdroid.AppTest">
+				<methods>
+					<include name="locationName" />
+					<include name="tearDown" />
+					<include name="within24Booking" />
+					<include name="setUp" />
+				</methods>
+			</class> <!-- org.syed.zoomdroid.AppTest -->
+		</classes>
+	</test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

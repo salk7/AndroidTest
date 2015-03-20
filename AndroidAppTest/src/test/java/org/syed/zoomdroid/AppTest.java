@@ -1,6 +1,5 @@
 package org.syed.zoomdroid;
 
-//import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 
 import java.io.File;
@@ -13,70 +12,75 @@ import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-import org.apache.commons.exec.ExecuteException;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-//import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class AppTest {
 	AndroidDriver driver;
 	Process Proc = null;
+	Boolean parent = false;
 
 	public void startAppiumServer() throws IOException, InterruptedException {
 
-		String[] command = { "cmd.exe","/c", "node E:\\Software\\Appium\\node_modules\\appium" };
+		String[] command = { "cmd.exe", "/c",
+				"node E:\\Software\\Appium\\node_modules\\appium" };
 		ProcessBuilder probuilder = new ProcessBuilder(command);
-		probuilder.redirectOutput(new File("./AppiumLog.txt"));
+		probuilder.redirectOutput(new File("./AppiumLog.log"));
 		Proc = probuilder.start();
 
-		// Proc =
-		// Runtime.getRuntime().exec("cmd.exe node E:\\Software\\Appium\\node_modules\\appium");
+		// System.out.println("-------------------------------------------------------");
+
 		System.out
-				.println("------------------Appium server started-------------------");
+				.println("-----------------Appium server started-----------------");
 		Thread.sleep(5000);
 	}
 
 	@BeforeTest
 	public void setUp() throws IOException, InterruptedException {
-	try{
-		startAppiumServer();
-		System.out.println("-------------Test Started-----------------");
-		DesiredCapabilities capabilities = new DesiredCapabilities();
-		capabilities.setCapability("deviceName", "XiomiHM Note");
-		capabilities.setCapability(CapabilityType.VERSION, "4.4.2");
-		capabilities.setCapability("platformName", "Android");
-		capabilities.setCapability("androidPackage", "com.zoomcar");
-		capabilities.setCapability("appActivity",
-				"com.zoomcar.activity.SplashActivity");
-		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"),
-				capabilities);
-		driver.manage().timeouts().implicitlyWait(30L, TimeUnit.SECONDS);
-	}
-	catch(Exception e){
-		System.out.println(e.getMessage());
-		System.out.println("Process destroyed");
-		Proc.destroy();
-		
-	}
-//		System.out.println("...............Test service initialized...............");
+		try {
+			startAppiumServer();
+			System.out
+					.println("----------------------Test Started---------------------");
+			DesiredCapabilities capabilities = new DesiredCapabilities();
+			capabilities.setCapability("deviceName", "XiomiHM Note");
+			capabilities.setCapability(CapabilityType.VERSION, "4.4.2");
+			capabilities.setCapability("platformName", "Android");
+			capabilities.setCapability("androidPackage", "com.zoomcar");
+			capabilities.setCapability("appActivity",
+					"com.zoomcar.activity.SplashActivity");
+			driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"),
+					capabilities);
+//			driver.manage().timeouts().implicitlyWait(30L, TimeUnit.SECONDS);
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+			System.out.println("Process destroyed");
+			Proc.destroy();
+
+		}
+		// System.out.println("...............Test service initialized...............");
 	}
 
 	public String[] lessThan24() {
 		// driver.startActivity("com.zoomcar",
 		// "com.zoomcar.activity.","com.zoomcar",driver.currentActivity());
 		String eDateTime, sDateTime;
+		// System.out.println("-------------------------------------------------------");
+
 		System.out
-				.println("-------------Less than 24hrs date picker------------- ");
+				.println("---------------Less than 24hrs date picker------------- ");
 		SimpleDateFormat sdf = new SimpleDateFormat("MMddhhmma");
 		GregorianCalendar cal = (GregorianCalendar) GregorianCalendar
 				.getInstance();
@@ -142,7 +146,7 @@ public class AppTest {
 		String sHour = sDateTime.substring(4, 6);
 		String sMin = sDateTime.substring(6, 8);
 		String ampm = sDateTime.substring(8, 10).toUpperCase();
-		listElements("com.zoomcar:id/calendar_tv", sDay, flag);
+		listElements("com.zoomcar:id/calendar_tv", sDay, flag).click();
 		// driver.manage().timeouts().implicitlyWait(60L, TimeUnit.SECONDS);
 		driver.findElement(By.name(sHour)).click();
 		driver.findElement(By.id("com.zoomcar:id/textView" + ampm)).click();
@@ -168,15 +172,28 @@ public class AppTest {
 		String eHour = eDateTime.substring(4, 6);
 		String eMin = eDateTime.substring(6, 8);
 		ampm = eDateTime.substring(8, 10).toUpperCase();
-		listElements("com.zoomcar:id/calendar_tv", eDay, false);
+		listElements("com.zoomcar:id/calendar_tv", eDay, false).click();
 		// driver.manage().timeouts().implicitlyWait(60L, TimeUnit.SECONDS);
 		driver.findElement(By.name(eHour)).click();
 		driver.findElement(By.id("com.zoomcar:id/textView" + ampm)).click();
 		driver.findElement(By.id("com.zoomcar:id/textView" + eMin)).click();
 	}
 
-	public void clickonHome() {
-		driver.findElement(By.id("android:id/up")).click();
+	public void clickonHome() throws InterruptedException {
+		WebElement up = null;
+		try {
+			up = driver.findElement(By.id("android:id/up"));
+		} catch (Exception e) {
+		}
+		try {
+			up = driver.findElement(By.id("android:id/home"));
+		} catch (Exception e) {
+		}
+		if (up != null) {
+			up.click();
+		} else
+			swipeLR();
+
 	}
 
 	@Test(enabled = true)
@@ -190,8 +207,7 @@ public class AppTest {
 				.id("com.zoomcar:id/textViewCityLocation"));
 		for (int i = 0; i < cities.length; i++) {
 			LocMenu.click();
-			listElements("com.zoomcar:id/textViewLocationName", cities[i],
-					false);
+			listElements("com.zoomcar:id/textViewLocationName", cities[i],false).click();
 			swipeLR();
 			Thread.sleep(2000);
 			locText = LocMenu.getText();
@@ -210,10 +226,9 @@ public class AppTest {
 		driver.swipe(startx, starty, endx, starty, 200);
 		System.out.println("swipeRight");
 		Thread.sleep(1000);
-		// driver.swipe(10, 900, 576, 900, 500);
 	}
 
-	public void listElements(String parentElement, String childElement,
+	public WebElement listElements(String parentElement, String childElement,
 			boolean lastElement) {
 		List<WebElement> weList = null;
 		WebElement el = null;
@@ -221,41 +236,81 @@ public class AppTest {
 		for (WebElement we : weList) {
 			// System.out.println("listing elements"+we.getText());
 			if (we.getText().toLowerCase().equals(childElement.toLowerCase())) {
-
 				el = we;
 				if (lastElement == false)
 					break;
 			}
 		}
 		System.out.println("clicking on :" + el.getText());
-		el.click();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return(el);
 	}
 
 	// @Test()
 	public void screenshot() throws InterruptedException, IOException {
 		driver.findElement(By.id("android:id/home")).click();
-		// driver.findElement(By.id("com.zoomcar:id/textViewMenuParent")).;
-		// List<WebElement> weList;
-		listElements("com.zoomcar:id/textViewMenuParent", "how it works", false);
-		listElements("com.zoomcar:id/textViewMenuChild", "faqs", false);
 		File srcFile = ((TakesScreenshot) driver)
 				.getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(srcFile, new File("./screenshots/fname.png"));
-		// System.out.println(FileUtils.sizeOf(srcFile));
 		for (int i = 0; i < 2; i++)
 			driver.findElement(By.id("android:id/home")).click();
 
 	}
 
+	@DataProvider
+	public Object[][] getData() {
+		Object[][] data = { { "Tariff", "Tariff Details" },
+				{ "Tariff", "Offers" }, { "Tariff", "Upcoming Peak Season" } ,
+				{"How It Works","How to Zoom"},{"How It Works","Zoom in Safety"}, 
+				{"How It Works", "Going Outstation"}, {"How It Works","FAQs"},
+				{"Policies","Fee Policy"},{"Policies","Eligibility"}, {"Policies","Privacy Policy"}
+				};
+		return data;
+	}
+
+	@Test(dataProvider = "getData", priority = 0)
+	public void leftMenu(String parentElementValue, String childElementValue)
+			throws InterruptedException {
+		WebElement webEl;
+		Thread.sleep(5000);
+		clickonHome();
+		swipeLR();
+		try {
+			WebDriverWait wait = new WebDriverWait(driver, 5L);
+			wait.until(ExpectedConditions.presenceOfElementLocated(By.id("com.zoomcar:id/textViewMenuChild")));
+			webEl=listElements("com.zoomcar:id/textViewMenuChild", childElementValue,false);
+			Assert.assertEquals(childElementValue,webEl.getText());
+			webEl.click();
+		} catch (Exception e) {
+			webEl=listElements("com.zoomcar:id/textViewMenuParent",parentElementValue, false);
+			Assert.assertEquals(parentElementValue,webEl.getText());
+			webEl.click();
+			webEl=listElements("com.zoomcar:id/textViewMenuChild", childElementValue,false);
+			Assert.assertEquals(childElementValue,webEl.getText());
+			webEl.click();
+		}
+	
+		
+	}
+
 	@AfterClass
 	public void tearDown() throws InterruptedException {
-		if (driver != null)
+		if (driver != null) {
 			driver.quit();
-		System.out.println("---------------------End of test--------------");
-		if (Proc != null)
+			// System.out.println("-------------------------------------------------------");
+			System.out
+					.println("---------------------End of test-----------------------");
+		}
+		if (Proc != null) {
 			Proc.destroy();
-		System.out
-				.println("------------appium server destroyed------------------");
+			System.out
+					.println("--------------Appium server destroyed------------------");
+		}
 		// Thread.sleep(10000);
 	}
 }
