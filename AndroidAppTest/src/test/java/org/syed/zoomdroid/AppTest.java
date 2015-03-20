@@ -63,7 +63,7 @@ public class AppTest {
 					"com.zoomcar.activity.SplashActivity");
 			driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"),
 					capabilities);
-//			driver.manage().timeouts().implicitlyWait(30L, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(5L, TimeUnit.SECONDS);
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 			System.out.println("Process destroyed");
