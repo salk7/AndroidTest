@@ -1,0 +1,330 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>TestNG:  Unit Test</title>
+<style type="text/css">
+table caption,table.info_table,table.param,table.passed,table.failed {margin-bottom:10px;border:1px solid #000099;border-collapse:collapse;empty-cells:show;}
+table.info_table td,table.info_table th,table.param td,table.param th,table.passed td,table.passed th,table.failed td,table.failed th {
+border:1px solid #000099;padding:.25em .5em .25em .5em
+}
+table.param th {vertical-align:bottom}
+td.numi,th.numi,td.numi_attn {
+text-align:right
+}
+tr.total td {font-weight:bold}
+table caption {
+text-align:center;font-weight:bold;
+}
+table.passed tr.stripe td,table tr.passedodd td {background-color: #00AA00;}
+table.passed td,table tr.passedeven td {background-color: #33FF33;}
+table.passed tr.stripe td,table tr.skippedodd td {background-color: #cccccc;}
+table.passed td,table tr.skippedodd td {background-color: #dddddd;}
+table.failed tr.stripe td,table tr.failedodd td,table.param td.numi_attn {background-color: #FF3333;}
+table.failed td,table tr.failedeven td,table.param tr.stripe td.numi_attn {background-color: #DD0000;}
+tr.stripe td,tr.stripe th {background-color: #E6EBF9;}
+p.totop {font-size:85%;text-align:center;border-bottom:2px black solid}
+div.shootout {padding:2em;border:3px #4854A8 solid}
+</style>
+</head>
+<body>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
+<tr><td style="text-align:left;padding-right:2em">Test1</td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi_attn">11</td><td class="numi">233.3 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="stripe"><td style="text-align:left;padding-right:2em">Test2</td><td class="numi">7</td><td class="numi">7</td><td class="numi">0</td><td class="numi_attn">5</td><td class="numi">187.2 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="total"><td>Total</td>
+<td class="numi">8</td><td class="numi">8</td><td class="numi">0</td><td class="numi_attn">16</td><td class="numi">420.6 seconds</td><td colspan="2">&nbsp;</td></tr>
+</table>
+<a id="summary"></a>
+<table cellspacing=0 cellpadding=0 class="passed">
+<tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Time<br/>(Msecs)</th></tr>
+<tr><th colspan="4">Test1 &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="11">org.syed.zoomdroid.AppTest<td><a href="#m1"><b>leftMenu</b>  </a></td><td class="numi">10</td><td class="numi">172424</td></tr><tr class="failedodd"><td><a href="#m2"><b>leftMenu</b>  </a></td><td class="numi">10</td><td class="numi">172424</td></tr><tr class="failedodd"><td><a href="#m3"><b>leftMenu</b>  </a></td><td class="numi">10</td><td class="numi">172424</td></tr><tr class="failedodd"><td><a href="#m4"><b>leftMenu</b>  </a></td><td class="numi">10</td><td class="numi">172424</td></tr><tr class="failedodd"><td><a href="#m5"><b>leftMenu</b>  </a></td><td class="numi">10</td><td class="numi">172424</td></tr><tr class="failedodd"><td><a href="#m6"><b>leftMenu</b>  </a></td><td class="numi">10</td><td class="numi">172424</td></tr><tr class="failedodd"><td><a href="#m7"><b>leftMenu</b>  </a></td><td class="numi">10</td><td class="numi">172424</td></tr><tr class="failedodd"><td><a href="#m8"><b>leftMenu</b>  </a></td><td class="numi">10</td><td class="numi">172424</td></tr><tr class="failedodd"><td><a href="#m9"><b>leftMenu</b>  </a></td><td class="numi">10</td><td class="numi">172424</td></tr><tr class="failedodd"><td><a href="#m10"><b>leftMenu</b>  </a></td><td class="numi">10</td><td class="numi">172424</td></tr><tr class="failedodd"><td><a href="#m11"><b>locationName</b>  </a></td><td class="numi">1</td><td class="numi">14933</td></tr>
+<tr><th colspan="4">Test1 &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="1">org.syed.zoomdroid.AppTest<td><a href="#m12"><b>within24Booking</b>  </a></td><td class="numi">1</td><td class="numi">40700</td></tr>
+<tr><th colspan="4">Test2 &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="5">org.syed.zoomdroid.AppTest<td><a href="#m13"><b>leftMenu</b>  </a></td><td class="numi">3</td><td class="numi">47084</td></tr><tr class="failedodd"><td><a href="#m14"><b>within24Booking</b>  </a></td><td class="numi">1</td><td class="numi">7131</td></tr><tr class="failedodd"><td><a href="#m15"><b>leftMenu</b>  </a></td><td class="numi">3</td><td class="numi">47084</td></tr><tr class="failedodd"><td><a href="#m16"><b>leftMenu</b>  </a></td><td class="numi">3</td><td class="numi">47084</td></tr><tr class="failedodd"><td><a href="#m17"><b>locationName</b>  </a></td><td class="numi">1</td><td class="numi">10548</td></tr>
+<tr><th colspan="4">Test2 &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="7">org.syed.zoomdroid.AppTest<td><a href="#m18"><b>leftMenu</b>  </a></td><td class="numi">7</td><td class="numi">117214</td></tr><tr class="passedodd"><td><a href="#m19"><b>leftMenu</b>  </a></td><td class="numi">7</td><td class="numi">117214</td></tr><tr class="passedodd"><td><a href="#m20"><b>leftMenu</b>  </a></td><td class="numi">7</td><td class="numi">117214</td></tr><tr class="passedodd"><td><a href="#m21"><b>leftMenu</b>  </a></td><td class="numi">7</td><td class="numi">117214</td></tr><tr class="passedodd"><td><a href="#m22"><b>leftMenu</b>  </a></td><td class="numi">7</td><td class="numi">117214</td></tr><tr class="passedodd"><td><a href="#m23"><b>leftMenu</b>  </a></td><td class="numi">7</td><td class="numi">117214</td></tr><tr class="passedodd"><td><a href="#m24"><b>leftMenu</b>  </a></td><td class="numi">7</td><td class="numi">117214</td></tr>
+</table>
+<h1>Test1</h1>
+<a id="m1"></a><h2>org.syed.zoomdroid.AppTest:leftMenu</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th><th style="padding-left:1em;padding-right:1em">Parameter #2</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">How It Works</td>
+<td style="padding-left:.5em;padding-right:2em">Going Outstation</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="2">
+<p>null</p>
+org.syed.zoomdroid.AppTest.listElements(AppTest.java:239)
+<br/>at org.syed.zoomdroid.AppTest.leftMenu(AppTest.java:285)
+<br/>14 lines not shown
+</td></tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m2"></a><h2>org.syed.zoomdroid.AppTest:leftMenu</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th><th style="padding-left:1em;padding-right:1em">Parameter #2</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">How It Works</td>
+<td style="padding-left:.5em;padding-right:2em">How to Zoom</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="2">
+<p>null</p>
+org.syed.zoomdroid.AppTest.listElements(AppTest.java:239)
+<br/>at org.syed.zoomdroid.AppTest.leftMenu(AppTest.java:285)
+<br/>14 lines not shown
+</td></tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m3"></a><h2>org.syed.zoomdroid.AppTest:leftMenu</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th><th style="padding-left:1em;padding-right:1em">Parameter #2</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">Policies</td>
+<td style="padding-left:.5em;padding-right:2em">Eligibility</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="2">
+<p>null</p>
+org.syed.zoomdroid.AppTest.listElements(AppTest.java:239)
+<br/>at org.syed.zoomdroid.AppTest.leftMenu(AppTest.java:285)
+<br/>14 lines not shown
+</td></tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m4"></a><h2>org.syed.zoomdroid.AppTest:leftMenu</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th><th style="padding-left:1em;padding-right:1em">Parameter #2</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">Policies</td>
+<td style="padding-left:.5em;padding-right:2em">Fee Policy</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="2">
+<p>null</p>
+org.syed.zoomdroid.AppTest.listElements(AppTest.java:239)
+<br/>at org.syed.zoomdroid.AppTest.leftMenu(AppTest.java:285)
+<br/>14 lines not shown
+</td></tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m5"></a><h2>org.syed.zoomdroid.AppTest:leftMenu</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th><th style="padding-left:1em;padding-right:1em">Parameter #2</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">How It Works</td>
+<td style="padding-left:.5em;padding-right:2em">Zoom in Safety</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="2">
+<p>null</p>
+org.syed.zoomdroid.AppTest.listElements(AppTest.java:239)
+<br/>at org.syed.zoomdroid.AppTest.leftMenu(AppTest.java:285)
+<br/>14 lines not shown
+</td></tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m6"></a><h2>org.syed.zoomdroid.AppTest:leftMenu</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th><th style="padding-left:1em;padding-right:1em">Parameter #2</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">Tariff</td>
+<td style="padding-left:.5em;padding-right:2em">Tariff Details</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="2">
+<p>null</p>
+org.syed.zoomdroid.AppTest.listElements(AppTest.java:239)
+<br/>at org.syed.zoomdroid.AppTest.leftMenu(AppTest.java:285)
+<br/>14 lines not shown
+</td></tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m7"></a><h2>org.syed.zoomdroid.AppTest:leftMenu</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th><th style="padding-left:1em;padding-right:1em">Parameter #2</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">Tariff</td>
+<td style="padding-left:.5em;padding-right:2em">Upcoming Peak Season</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="2">
+<p>null</p>
+org.syed.zoomdroid.AppTest.listElements(AppTest.java:239)
+<br/>at org.syed.zoomdroid.AppTest.leftMenu(AppTest.java:285)
+<br/>14 lines not shown
+</td></tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m8"></a><h2>org.syed.zoomdroid.AppTest:leftMenu</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th><th style="padding-left:1em;padding-right:1em">Parameter #2</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">Policies</td>
+<td style="padding-left:.5em;padding-right:2em">Privacy Policy</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="2">
+<p>null</p>
+org.syed.zoomdroid.AppTest.listElements(AppTest.java:239)
+<br/>at org.syed.zoomdroid.AppTest.leftMenu(AppTest.java:285)
+<br/>14 lines not shown
+</td></tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m9"></a><h2>org.syed.zoomdroid.AppTest:leftMenu</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th><th style="padding-left:1em;padding-right:1em">Parameter #2</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">How It Works</td>
+<td style="padding-left:.5em;padding-right:2em">FAQs</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="2">
+<p>null</p>
+org.syed.zoomdroid.AppTest.listElements(AppTest.java:239)
+<br/>at org.syed.zoomdroid.AppTest.leftMenu(AppTest.java:285)
+<br/>14 lines not shown
+</td></tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m10"></a><h2>org.syed.zoomdroid.AppTest:leftMenu</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th><th style="padding-left:1em;padding-right:1em">Parameter #2</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">Tariff</td>
+<td style="padding-left:.5em;padding-right:2em">Offers</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="2">
+<p>null</p>
+org.syed.zoomdroid.AppTest.listElements(AppTest.java:239)
+<br/>at org.syed.zoomdroid.AppTest.leftMenu(AppTest.java:285)
+<br/>14 lines not shown
+</td></tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m11"></a><h2>org.syed.zoomdroid.AppTest:locationName</h2>
+<div style="padding-left:3em">
+<p>An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 3.00 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf323ce037c5f92db6c1bba601c2ac43ad8&apos;, time: &apos;2014-10-23 13:11:40&apos;
+System info: host: &apos;Syed-PC&apos;, ip: &apos;127.0.0.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.7.0_71&apos;
+Session ID: 8a431212-2060-4f91-91c7-51c1a5530c9e
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{platform=LINUX, javascriptEnabled=true, androidPackage=com.zoomcar, appActivity=com.zoomcar.activity.SplashActivity, browserName=Android, networkConnectionEnabled=true, desired={androidPackage=com.zoomcar, platformName=Android, deviceName=XiomiHM Note, appActivity=com.zoomcar.activity.SplashActivity, version=4.4.2}, locationContextEnabled=false, version=4.4.2, platformVersion=4.1, databaseEnabled=false, deviceName=XiomiHM Note, platformName=Android, webStorageEnabled=false, warnings={}, takesScreenshot=true}]</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+<br/>at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:180)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
+<br/>at org.openqa.selenium.By$ById.findElement(By.java:214)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+<br/>at org.syed.zoomdroid.AppTest.locationName(AppTest.java:201)
+<br/>14 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m12"></a><h2>org.syed.zoomdroid.AppTest:within24Booking</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>Test2</h1>
+<a id="m13"></a><h2>org.syed.zoomdroid.AppTest:leftMenu</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th><th style="padding-left:1em;padding-right:1em">Parameter #2</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">Tariff</td>
+<td style="padding-left:.5em;padding-right:2em">Offers</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="2">
+<p>null</p>
+org.syed.zoomdroid.AppTest.listElements(AppTest.java:239)
+<br/>at org.syed.zoomdroid.AppTest.leftMenu(AppTest.java:285)
+<br/>14 lines not shown
+</td></tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m14"></a><h2>org.syed.zoomdroid.AppTest:within24Booking</h2>
+<div style="padding-left:3em">
+<p>null</p>
+org.syed.zoomdroid.AppTest.listElements(AppTest.java:239)
+<br/>at org.syed.zoomdroid.AppTest.within24Booking(AppTest.java:143)
+<br/>14 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m15"></a><h2>org.syed.zoomdroid.AppTest:leftMenu</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th><th style="padding-left:1em;padding-right:1em">Parameter #2</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">Tariff</td>
+<td style="padding-left:.5em;padding-right:2em">Tariff Details</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="2">
+<p>null</p>
+org.syed.zoomdroid.AppTest.listElements(AppTest.java:239)
+<br/>at org.syed.zoomdroid.AppTest.leftMenu(AppTest.java:285)
+<br/>14 lines not shown
+</td></tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m16"></a><h2>org.syed.zoomdroid.AppTest:leftMenu</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th><th style="padding-left:1em;padding-right:1em">Parameter #2</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">Tariff</td>
+<td style="padding-left:.5em;padding-right:2em">Upcoming Peak Season</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="2">
+<p>null</p>
+org.syed.zoomdroid.AppTest.listElements(AppTest.java:239)
+<br/>at org.syed.zoomdroid.AppTest.leftMenu(AppTest.java:285)
+<br/>14 lines not shown
+</td></tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m17"></a><h2>org.syed.zoomdroid.AppTest:locationName</h2>
+<div style="padding-left:3em">
+<p>An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 2.55 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf323ce037c5f92db6c1bba601c2ac43ad8&apos;, time: &apos;2014-10-23 13:11:40&apos;
+System info: host: &apos;Syed-PC&apos;, ip: &apos;127.0.0.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.7.0_71&apos;
+Session ID: dc02a658-47b9-4679-868b-e98de7f98d3e
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{platform=LINUX, javascriptEnabled=true, androidPackage=com.zoomcar, appActivity=com.zoomcar.activity.SplashActivity, browserName=Android, networkConnectionEnabled=true, desired={androidPackage=com.zoomcar, platformName=Android, deviceName=XiomiHM Note, appActivity=com.zoomcar.activity.SplashActivity, version=4.4.2}, locationContextEnabled=false, version=4.4.2, platformVersion=4.1, databaseEnabled=false, deviceName=XiomiHM Note, platformName=Android, webStorageEnabled=false, warnings={}, takesScreenshot=true}]</p>
+sun.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+<br/>at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:180)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
+<br/>at org.openqa.selenium.By$ById.findElement(By.java:214)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+<br/>at org.syed.zoomdroid.AppTest.locationName(AppTest.java:201)
+<br/>14 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m18"></a><h2>org.syed.zoomdroid.AppTest:leftMenu</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th><th style="padding-left:1em;padding-right:1em">Parameter #2</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">How It Works</td>
+<td style="padding-left:.5em;padding-right:2em">How to Zoom</td>
+</tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m19"></a><h2>org.syed.zoomdroid.AppTest:leftMenu</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th><th style="padding-left:1em;padding-right:1em">Parameter #2</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">Policies</td>
+<td style="padding-left:.5em;padding-right:2em">Fee Policy</td>
+</tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m20"></a><h2>org.syed.zoomdroid.AppTest:leftMenu</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th><th style="padding-left:1em;padding-right:1em">Parameter #2</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">How It Works</td>
+<td style="padding-left:.5em;padding-right:2em">Going Outstation</td>
+</tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m21"></a><h2>org.syed.zoomdroid.AppTest:leftMenu</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th><th style="padding-left:1em;padding-right:1em">Parameter #2</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">Policies</td>
+<td style="padding-left:.5em;padding-right:2em">Eligibility</td>
+</tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m22"></a><h2>org.syed.zoomdroid.AppTest:leftMenu</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th><th style="padding-left:1em;padding-right:1em">Parameter #2</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">How It Works</td>
+<td style="padding-left:.5em;padding-right:2em">Zoom in Safety</td>
+</tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m23"></a><h2>org.syed.zoomdroid.AppTest:leftMenu</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th><th style="padding-left:1em;padding-right:1em">Parameter #2</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">Policies</td>
+<td style="padding-left:.5em;padding-right:2em">Privacy Policy</td>
+</tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m24"></a><h2>org.syed.zoomdroid.AppTest:leftMenu</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th><th style="padding-left:1em;padding-right:1em">Parameter #2</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">How It Works</td>
+<td style="padding-left:.5em;padding-right:2em">FAQs</td>
+</tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+</body></html>

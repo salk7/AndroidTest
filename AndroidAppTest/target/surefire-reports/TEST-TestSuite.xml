@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestSuite" time="78.065" tests="24" errors="0" skipped="0" failures="16">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.7.0_71\jre\bin"/>
+    <property name="java.vm.version" value="24.71-b01"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="IN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="E:\MobileAutoTest\AndroidAppTest"/>
+    <property name="java.runtime.version" value="1.7.0_71-b14"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.7.0_71\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\SYEDSA~1\AppData\Local\Temp\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 8.1"/>
+    <property name="classworlds.conf" value="E:\Software\apache-maven-3.2.5\bin\..\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.7.0_71\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;E:\Software\apache-maven-3.2.5\bin;E:\Software\ChromeDriver\;E:\Software\IEDriverServer\IEDriverServer.exe;C:\Program Files\Java\jdk1.7.0_71\bin;C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin;C:\Program Files (x86)\Git\cmd;C:\Program Files (x86)\GitExtensions\;C:\Program Files\nodejs\;C:\Program Files (x86)\Android\android-sdk\\platform-tools;C:\Program Files (x86)\Android\android-sdk\tools;C:\Program Files (x86)\Android\android-sdk\build-tools;E:\Software\apache-ant-1.9.4-bin\bin;C:\Users\Syed Salman Ahmed\AppData\Roaming\npm;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="51.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="6.3"/>
+    <property name="user.home" value="C:\Users\Syed Salman Ahmed"/>
+    <property name="user.timezone" value="Asia/Calcutta"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.7"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="user.name" value="Syed Salman Ahmed"/>
+    <property name="java.class.path" value="E:\Software\apache-maven-3.2.5\bin\..\boot\plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.7"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.7.0_71\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher package"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.7.0_71"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.7.0_71\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.7.0_71\jre\lib\resources.jar;C:\Program Files\Java\jdk1.7.0_71\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_71\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.7.0_71\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.7.0_71\jre\lib\jce.jar;C:\Program Files\Java\jdk1.7.0_71\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.7.0_71\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.7.0_71\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="E:\Software\apache-maven-3.2.5\bin\.."/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase name="locationName" classname="org.syed.zoomdroid.AppTest" time="14.972">
+    <failure message="An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 3.00 seconds&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf323ce037c5f92db6c1bba601c2ac43ad8&apos;, time: &apos;2014-10-23 13:11:40&apos;&#10;System info: host: &apos;Syed-PC&apos;, ip: &apos;127.0.0.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.7.0_71&apos;&#10;Session ID: 8a431212-2060-4f91-91c7-51c1a5530c9e&#10;Driver info: io.appium.java_client.android.AndroidDriver&#10;Capabilities [{platform=LINUX, javascriptEnabled=true, androidPackage=com.zoomcar, appActivity=com.zoomcar.activity.SplashActivity, browserName=Android, networkConnectionEnabled=true, desired={androidPackage=com.zoomcar, platformName=Android, deviceName=XiomiHM Note, appActivity=com.zoomcar.activity.SplashActivity, version=4.4.2}, locationContextEnabled=false, version=4.4.2, platformVersion=4.1, databaseEnabled=false, deviceName=XiomiHM Note, platformName=Android, webStorageEnabled=false, warnings={}, takesScreenshot=true}]" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 3.00 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.44.0', revision: '76d78cf323ce037c5f92db6c1bba601c2ac43ad8', time: '2014-10-23 13:11:40'
+System info: host: 'Syed-PC', ip: '127.0.0.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.7.0_71'
+Session ID: 8a431212-2060-4f91-91c7-51c1a5530c9e
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{platform=LINUX, javascriptEnabled=true, androidPackage=com.zoomcar, appActivity=com.zoomcar.activity.SplashActivity, browserName=Android, networkConnectionEnabled=true, desired={androidPackage=com.zoomcar, platformName=Android, deviceName=XiomiHM Note, appActivity=com.zoomcar.activity.SplashActivity, version=4.4.2}, locationContextEnabled=false, version=4.4.2, platformVersion=4.1, databaseEnabled=false, deviceName=XiomiHM Note, platformName=Android, webStorageEnabled=false, warnings={}, takesScreenshot=true}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:180)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
+	at org.openqa.selenium.By$ById.findElement(By.java:214)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.syed.zoomdroid.AppTest.locationName(AppTest.java:201)
+</failure>
+    <system-out><![CDATA[Fri Mar 20 20:47:43 IST 2015
+-----------------Appium server started-----------------
+----------------------Test Started---------------------
+swipeRight
+]]></system-out>
+  </testcase>
+  <testcase name="locationName" classname="org.syed.zoomdroid.AppTest" time="10.549">
+    <failure message="An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 2.55 seconds&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf323ce037c5f92db6c1bba601c2ac43ad8&apos;, time: &apos;2014-10-23 13:11:40&apos;&#10;System info: host: &apos;Syed-PC&apos;, ip: &apos;127.0.0.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.7.0_71&apos;&#10;Session ID: dc02a658-47b9-4679-868b-e98de7f98d3e&#10;Driver info: io.appium.java_client.android.AndroidDriver&#10;Capabilities [{platform=LINUX, javascriptEnabled=true, androidPackage=com.zoomcar, appActivity=com.zoomcar.activity.SplashActivity, browserName=Android, networkConnectionEnabled=true, desired={androidPackage=com.zoomcar, platformName=Android, deviceName=XiomiHM Note, appActivity=com.zoomcar.activity.SplashActivity, version=4.4.2}, locationContextEnabled=false, version=4.4.2, platformVersion=4.1, databaseEnabled=false, deviceName=XiomiHM Note, platformName=Android, webStorageEnabled=false, warnings={}, takesScreenshot=true}]" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 2.55 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.44.0', revision: '76d78cf323ce037c5f92db6c1bba601c2ac43ad8', time: '2014-10-23 13:11:40'
+System info: host: 'Syed-PC', ip: '127.0.0.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.7.0_71'
+Session ID: dc02a658-47b9-4679-868b-e98de7f98d3e
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{platform=LINUX, javascriptEnabled=true, androidPackage=com.zoomcar, appActivity=com.zoomcar.activity.SplashActivity, browserName=Android, networkConnectionEnabled=true, desired={androidPackage=com.zoomcar, platformName=Android, deviceName=XiomiHM Note, appActivity=com.zoomcar.activity.SplashActivity, version=4.4.2}, locationContextEnabled=false, version=4.4.2, platformVersion=4.1, databaseEnabled=false, deviceName=XiomiHM Note, platformName=Android, webStorageEnabled=false, warnings={}, takesScreenshot=true}]
+	at sun.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:180)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
+	at org.openqa.selenium.By$ById.findElement(By.java:214)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.syed.zoomdroid.AppTest.locationName(AppTest.java:201)
+</failure>
+    <system-out><![CDATA[---------------------End of test-----------------------
+--------------Appium server destroyed------------------
+Fri Mar 20 20:51:37 IST 2015
+Fri Mar 20 20:51:37 IST 2015
+-----------------Appium server started-----------------
+----------------------Test Started---------------------
+swipeRight
+]]></system-out>
+  </testcase>
+  <testcase name="leftMenu" classname="org.syed.zoomdroid.AppTest" time="22.392">
+    <failure type="java.lang.NullPointerException:">java.lang.NullPointerException: null
+	at org.syed.zoomdroid.AppTest.listElements(AppTest.java:239)
+	at org.syed.zoomdroid.AppTest.leftMenu(AppTest.java:285)
+</failure>
+  </testcase>
+  <testcase name="leftMenu" classname="org.syed.zoomdroid.AppTest" time="15.227">
+    <failure type="java.lang.NullPointerException:">java.lang.NullPointerException: null
+	at org.syed.zoomdroid.AppTest.listElements(AppTest.java:239)
+	at org.syed.zoomdroid.AppTest.leftMenu(AppTest.java:285)
+</failure>
+    <system-out><![CDATA[swipeRight
+]]></system-out>
+  </testcase>
+  <testcase name="leftMenu" classname="org.syed.zoomdroid.AppTest" time="16.299">
+    <failure type="java.lang.NullPointerException:">java.lang.NullPointerException: null
+	at org.syed.zoomdroid.AppTest.listElements(AppTest.java:239)
+	at org.syed.zoomdroid.AppTest.leftMenu(AppTest.java:285)
+</failure>
+    <system-out><![CDATA[swipeRight
+]]></system-out>
+  </testcase>
+  <testcase name="leftMenu" classname="org.syed.zoomdroid.AppTest" time="20.516">
+    <failure type="java.lang.NullPointerException:">java.lang.NullPointerException: null
+	at org.syed.zoomdroid.AppTest.listElements(AppTest.java:239)
+	at org.syed.zoomdroid.AppTest.leftMenu(AppTest.java:285)
+</failure>
+    <system-out><![CDATA[swipeRight
+]]></system-out>
+  </testcase>
+  <testcase name="leftMenu" classname="org.syed.zoomdroid.AppTest" time="20.448">
+    <failure type="java.lang.NullPointerException:">java.lang.NullPointerException: null
+	at org.syed.zoomdroid.AppTest.listElements(AppTest.java:239)
+	at org.syed.zoomdroid.AppTest.leftMenu(AppTest.java:285)
+</failure>
+    <system-out><![CDATA[swipeRight
+]]></system-out>
+  </testcase>
+  <testcase name="leftMenu" classname="org.syed.zoomdroid.AppTest" time="15.352">
+    <failure type="java.lang.NullPointerException:">java.lang.NullPointerException: null
+	at org.syed.zoomdroid.AppTest.listElements(AppTest.java:239)
+	at org.syed.zoomdroid.AppTest.leftMenu(AppTest.java:285)
+</failure>
+    <system-out><![CDATA[swipeRight
+]]></system-out>
+  </testcase>
+  <testcase name="leftMenu" classname="org.syed.zoomdroid.AppTest" time="15.579">
+    <failure type="java.lang.NullPointerException:">java.lang.NullPointerException: null
+	at org.syed.zoomdroid.AppTest.listElements(AppTest.java:239)
+	at org.syed.zoomdroid.AppTest.leftMenu(AppTest.java:285)
+</failure>
+    <system-out><![CDATA[swipeRight
+]]></system-out>
+  </testcase>
+  <testcase name="leftMenu" classname="org.syed.zoomdroid.AppTest" time="15.368">
+    <failure type="java.lang.NullPointerException:">java.lang.NullPointerException: null
+	at org.syed.zoomdroid.AppTest.listElements(AppTest.java:239)
+	at org.syed.zoomdroid.AppTest.leftMenu(AppTest.java:285)
+</failure>
+    <system-out><![CDATA[swipeRight
+]]></system-out>
+  </testcase>
+  <testcase name="leftMenu" classname="org.syed.zoomdroid.AppTest" time="15.7">
+    <failure type="java.lang.NullPointerException:">java.lang.NullPointerException: null
+	at org.syed.zoomdroid.AppTest.listElements(AppTest.java:239)
+	at org.syed.zoomdroid.AppTest.leftMenu(AppTest.java:285)
+</failure>
+    <system-out><![CDATA[swipeRight
+]]></system-out>
+  </testcase>
+  <testcase name="leftMenu" classname="org.syed.zoomdroid.AppTest" time="15.54">
+    <failure type="java.lang.NullPointerException:">java.lang.NullPointerException: null
+	at org.syed.zoomdroid.AppTest.listElements(AppTest.java:239)
+	at org.syed.zoomdroid.AppTest.leftMenu(AppTest.java:285)
+</failure>
+    <system-out><![CDATA[swipeRight
+]]></system-out>
+  </testcase>
+  <testcase name="leftMenu" classname="org.syed.zoomdroid.AppTest" time="15.748">
+    <failure type="java.lang.NullPointerException:">java.lang.NullPointerException: null
+	at org.syed.zoomdroid.AppTest.listElements(AppTest.java:239)
+	at org.syed.zoomdroid.AppTest.leftMenu(AppTest.java:285)
+</failure>
+  </testcase>
+  <testcase name="leftMenu" classname="org.syed.zoomdroid.AppTest" time="16.265">
+    <failure type="java.lang.NullPointerException:">java.lang.NullPointerException: null
+	at org.syed.zoomdroid.AppTest.listElements(AppTest.java:239)
+	at org.syed.zoomdroid.AppTest.leftMenu(AppTest.java:285)
+</failure>
+    <system-out><![CDATA[swipeRight
+]]></system-out>
+  </testcase>
+  <testcase name="leftMenu" classname="org.syed.zoomdroid.AppTest" time="15.071">
+    <failure type="java.lang.NullPointerException:">java.lang.NullPointerException: null
+	at org.syed.zoomdroid.AppTest.listElements(AppTest.java:239)
+	at org.syed.zoomdroid.AppTest.leftMenu(AppTest.java:285)
+</failure>
+    <system-out><![CDATA[swipeRight
+]]></system-out>
+  </testcase>
+  <testcase name="leftMenu" classname="org.syed.zoomdroid.AppTest" time="18.967"/>
+  <testcase name="leftMenu" classname="org.syed.zoomdroid.AppTest" time="16.397"/>
+  <testcase name="leftMenu" classname="org.syed.zoomdroid.AppTest" time="15.647"/>
+  <testcase name="leftMenu" classname="org.syed.zoomdroid.AppTest" time="15.881"/>
+  <testcase name="leftMenu" classname="org.syed.zoomdroid.AppTest" time="19.311"/>
+  <testcase name="leftMenu" classname="org.syed.zoomdroid.AppTest" time="15.377"/>
+  <testcase name="leftMenu" classname="org.syed.zoomdroid.AppTest" time="15.632"/>
+  <testcase name="within24Booking" classname="org.syed.zoomdroid.AppTest" time="40.701"/>
+  <testcase name="within24Booking" classname="org.syed.zoomdroid.AppTest" time="7.132">
+    <failure type="java.lang.NullPointerException:">java.lang.NullPointerException: null
+	at org.syed.zoomdroid.AppTest.listElements(AppTest.java:239)
+	at org.syed.zoomdroid.AppTest.within24Booking(AppTest.java:143)
+</failure>
+    <system-out><![CDATA[swipeRight
+An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 2.52 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.44.0', revision: '76d78cf323ce037c5f92db6c1bba601c2ac43ad8', time: '2014-10-23 13:11:40'
+System info: host: 'Syed-PC', ip: '127.0.0.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.7.0_71'
+Session ID: dc02a658-47b9-4679-868b-e98de7f98d3e
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{platform=LINUX, javascriptEnabled=true, androidPackage=com.zoomcar, appActivity=com.zoomcar.activity.SplashActivity, browserName=Android, networkConnectionEnabled=true, desired={androidPackage=com.zoomcar, platformName=Android, deviceName=XiomiHM Note, appActivity=com.zoomcar.activity.SplashActivity, version=4.4.2}, locationContextEnabled=false, version=4.4.2, platformVersion=4.1, databaseEnabled=false, deviceName=XiomiHM Note, platformName=Android, webStorageEnabled=false, warnings={}, takesScreenshot=true}]
+---------------Less than 24hrs date picker------------- 
+current time	:	Fri Mar 20 20:54:40 IST 2015
+start time 	:	Fri Mar 20 21:00:40 IST 2015
+end time 	:	Thu Apr 02 21:00:40 IST 2015
+]]></system-out>
+  </testcase>
+</testsuite>

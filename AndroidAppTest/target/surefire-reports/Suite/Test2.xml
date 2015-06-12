@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite hostname="Syed-PC" name="org.syed.zoomdroid.AppTest" tests="12" failures="5" timestamp="20 Mar 2015 15:24:44 GMT" time="187.187" errors="0">
+  <testcase name="locationName" time="10.548" classname="org.syed.zoomdroid.AppTest">
+    <failure type="org.openqa.selenium.NoSuchElementException" message="An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 2.55 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &amp;apos;2.44.0&amp;apos;, revision: &amp;apos;76d78cf323ce037c5f92db6c1bba601c2ac43ad8&amp;apos;, time: &amp;apos;2014-10-23 13:11:40&amp;apos;
+System info: host: &amp;apos;Syed-PC&amp;apos;, ip: &amp;apos;127.0.0.1&amp;apos;, os.name: &amp;apos;Windows 8.1&amp;apos;, os.arch: &amp;apos;amd64&amp;apos;, os.version: &amp;apos;6.3&amp;apos;, java.version: &amp;apos;1.7.0_71&amp;apos;
+Session ID: dc02a658-47b9-4679-868b-e98de7f98d3e
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{platform=LINUX, javascriptEnabled=true, androidPackage=com.zoomcar, appActivity=com.zoomcar.activity.SplashActivity, browserName=Android, networkConnectionEnabled=true, desired={androidPackage=com.zoomcar, platformName=Android, deviceName=XiomiHM Note, appActivity=com.zoomcar.activity.SplashActivity, version=4.4.2}, locationContextEnabled=false, version=4.4.2, platformVersion=4.1, databaseEnabled=false, deviceName=XiomiHM Note, platformName=Android, webStorageEnabled=false, warnings={}, takesScreenshot=true}]">
+      <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 2.55 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.44.0', revision: '76d78cf323ce037c5f92db6c1bba601c2ac43ad8', time: '2014-10-23 13:11:40'
+System info: host: 'Syed-PC', ip: '127.0.0.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.7.0_71'
+Session ID: dc02a658-47b9-4679-868b-e98de7f98d3e
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{platform=LINUX, javascriptEnabled=true, androidPackage=com.zoomcar, appActivity=com.zoomcar.activity.SplashActivity, browserName=Android, networkConnectionEnabled=true, desired={androidPackage=com.zoomcar, platformName=Android, deviceName=XiomiHM Note, appActivity=com.zoomcar.activity.SplashActivity, version=4.4.2}, locationContextEnabled=false, version=4.4.2, platformVersion=4.1, databaseEnabled=false, deviceName=XiomiHM Note, platformName=Android, webStorageEnabled=false, warnings={}, takesScreenshot=true}]
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:180)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
+	at org.openqa.selenium.By$ById.findElement(By.java:214)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.syed.zoomdroid.AppTest.locationName(AppTest.java:201)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+... Removed 13 stack frames]]>
+    </failure>
+  </testcase>
+  <testcase name="leftMenu" time="15.748" classname="org.syed.zoomdroid.AppTest">
+    <failure type="java.lang.NullPointerException">
+      <![CDATA[java.lang.NullPointerException
+	at org.syed.zoomdroid.AppTest.listElements(AppTest.java:239)
+	at org.syed.zoomdroid.AppTest.leftMenu(AppTest.java:285)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+... Removed 10 stack frames]]>
+    </failure>
+  </testcase>
+  <testcase name="leftMenu" time="16.265" classname="org.syed.zoomdroid.AppTest">
+    <failure type="java.lang.NullPointerException">
+      <![CDATA[java.lang.NullPointerException
+	at org.syed.zoomdroid.AppTest.listElements(AppTest.java:239)
+	at org.syed.zoomdroid.AppTest.leftMenu(AppTest.java:285)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+... Removed 10 stack frames]]>
+    </failure>
+  </testcase>
+  <testcase name="leftMenu" time="15.07" classname="org.syed.zoomdroid.AppTest">
+    <failure type="java.lang.NullPointerException">
+      <![CDATA[java.lang.NullPointerException
+	at org.syed.zoomdroid.AppTest.listElements(AppTest.java:239)
+	at org.syed.zoomdroid.AppTest.leftMenu(AppTest.java:285)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+... Removed 10 stack frames]]>
+    </failure>
+  </testcase>
+  <testcase name="leftMenu" time="18.967" classname="org.syed.zoomdroid.AppTest"/>
+  <testcase name="leftMenu" time="16.397" classname="org.syed.zoomdroid.AppTest"/>
+  <testcase name="leftMenu" time="15.647" classname="org.syed.zoomdroid.AppTest"/>
+  <testcase name="leftMenu" time="15.881" classname="org.syed.zoomdroid.AppTest"/>
+  <testcase name="leftMenu" time="19.312" classname="org.syed.zoomdroid.AppTest"/>
+  <testcase name="leftMenu" time="15.377" classname="org.syed.zoomdroid.AppTest"/>
+  <testcase name="leftMenu" time="15.632" classname="org.syed.zoomdroid.AppTest"/>
+  <testcase name="within24Booking" time="7.131" classname="org.syed.zoomdroid.AppTest">
+    <failure type="java.lang.NullPointerException">
+      <![CDATA[java.lang.NullPointerException
+	at org.syed.zoomdroid.AppTest.listElements(AppTest.java:239)
+	at org.syed.zoomdroid.AppTest.within24Booking(AppTest.java:143)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+... Removed 10 stack frames]]>
+    </failure>
+  </testcase>
+</testsuite>

@@ -1,0 +1,119 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 24, Failures: 16, Errors: 0, Skipped: 0, Time elapsed: 421.687 sec <<< FAILURE! - in TestSuite
+locationName(org.syed.zoomdroid.AppTest)  Time elapsed: 14.972 sec  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 3.00 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.44.0', revision: '76d78cf323ce037c5f92db6c1bba601c2ac43ad8', time: '2014-10-23 13:11:40'
+System info: host: 'Syed-PC', ip: '127.0.0.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.7.0_71'
+Session ID: 8a431212-2060-4f91-91c7-51c1a5530c9e
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{platform=LINUX, javascriptEnabled=true, androidPackage=com.zoomcar, appActivity=com.zoomcar.activity.SplashActivity, browserName=Android, networkConnectionEnabled=true, desired={androidPackage=com.zoomcar, platformName=Android, deviceName=XiomiHM Note, appActivity=com.zoomcar.activity.SplashActivity, version=4.4.2}, locationContextEnabled=false, version=4.4.2, platformVersion=4.1, databaseEnabled=false, deviceName=XiomiHM Note, platformName=Android, webStorageEnabled=false, warnings={}, takesScreenshot=true}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:180)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
+	at org.openqa.selenium.By$ById.findElement(By.java:214)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.syed.zoomdroid.AppTest.locationName(AppTest.java:201)
+
+leftMenu(org.syed.zoomdroid.AppTest)  Time elapsed: 22.392 sec  <<< FAILURE!
+java.lang.NullPointerException: null
+	at org.syed.zoomdroid.AppTest.listElements(AppTest.java:239)
+	at org.syed.zoomdroid.AppTest.leftMenu(AppTest.java:285)
+
+leftMenu(org.syed.zoomdroid.AppTest)  Time elapsed: 15.227 sec  <<< FAILURE!
+java.lang.NullPointerException: null
+	at org.syed.zoomdroid.AppTest.listElements(AppTest.java:239)
+	at org.syed.zoomdroid.AppTest.leftMenu(AppTest.java:285)
+
+leftMenu(org.syed.zoomdroid.AppTest)  Time elapsed: 16.299 sec  <<< FAILURE!
+java.lang.NullPointerException: null
+	at org.syed.zoomdroid.AppTest.listElements(AppTest.java:239)
+	at org.syed.zoomdroid.AppTest.leftMenu(AppTest.java:285)
+
+leftMenu(org.syed.zoomdroid.AppTest)  Time elapsed: 20.516 sec  <<< FAILURE!
+java.lang.NullPointerException: null
+	at org.syed.zoomdroid.AppTest.listElements(AppTest.java:239)
+	at org.syed.zoomdroid.AppTest.leftMenu(AppTest.java:285)
+
+leftMenu(org.syed.zoomdroid.AppTest)  Time elapsed: 20.448 sec  <<< FAILURE!
+java.lang.NullPointerException: null
+	at org.syed.zoomdroid.AppTest.listElements(AppTest.java:239)
+	at org.syed.zoomdroid.AppTest.leftMenu(AppTest.java:285)
+
+leftMenu(org.syed.zoomdroid.AppTest)  Time elapsed: 15.352 sec  <<< FAILURE!
+java.lang.NullPointerException: null
+	at org.syed.zoomdroid.AppTest.listElements(AppTest.java:239)
+	at org.syed.zoomdroid.AppTest.leftMenu(AppTest.java:285)
+
+leftMenu(org.syed.zoomdroid.AppTest)  Time elapsed: 15.579 sec  <<< FAILURE!
+java.lang.NullPointerException: null
+	at org.syed.zoomdroid.AppTest.listElements(AppTest.java:239)
+	at org.syed.zoomdroid.AppTest.leftMenu(AppTest.java:285)
+
+leftMenu(org.syed.zoomdroid.AppTest)  Time elapsed: 15.368 sec  <<< FAILURE!
+java.lang.NullPointerException: null
+	at org.syed.zoomdroid.AppTest.listElements(AppTest.java:239)
+	at org.syed.zoomdroid.AppTest.leftMenu(AppTest.java:285)
+
+leftMenu(org.syed.zoomdroid.AppTest)  Time elapsed: 15.7 sec  <<< FAILURE!
+java.lang.NullPointerException: null
+	at org.syed.zoomdroid.AppTest.listElements(AppTest.java:239)
+	at org.syed.zoomdroid.AppTest.leftMenu(AppTest.java:285)
+
+leftMenu(org.syed.zoomdroid.AppTest)  Time elapsed: 15.54 sec  <<< FAILURE!
+java.lang.NullPointerException: null
+	at org.syed.zoomdroid.AppTest.listElements(AppTest.java:239)
+	at org.syed.zoomdroid.AppTest.leftMenu(AppTest.java:285)
+
+locationName(org.syed.zoomdroid.AppTest)  Time elapsed: 10.549 sec  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 2.55 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.44.0', revision: '76d78cf323ce037c5f92db6c1bba601c2ac43ad8', time: '2014-10-23 13:11:40'
+System info: host: 'Syed-PC', ip: '127.0.0.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.7.0_71'
+Session ID: dc02a658-47b9-4679-868b-e98de7f98d3e
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{platform=LINUX, javascriptEnabled=true, androidPackage=com.zoomcar, appActivity=com.zoomcar.activity.SplashActivity, browserName=Android, networkConnectionEnabled=true, desired={androidPackage=com.zoomcar, platformName=Android, deviceName=XiomiHM Note, appActivity=com.zoomcar.activity.SplashActivity, version=4.4.2}, locationContextEnabled=false, version=4.4.2, platformVersion=4.1, databaseEnabled=false, deviceName=XiomiHM Note, platformName=Android, webStorageEnabled=false, warnings={}, takesScreenshot=true}]
+	at sun.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:180)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
+	at org.openqa.selenium.By$ById.findElement(By.java:214)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.syed.zoomdroid.AppTest.locationName(AppTest.java:201)
+
+leftMenu(org.syed.zoomdroid.AppTest)  Time elapsed: 15.748 sec  <<< FAILURE!
+java.lang.NullPointerException: null
+	at org.syed.zoomdroid.AppTest.listElements(AppTest.java:239)
+	at org.syed.zoomdroid.AppTest.leftMenu(AppTest.java:285)
+
+leftMenu(org.syed.zoomdroid.AppTest)  Time elapsed: 16.265 sec  <<< FAILURE!
+java.lang.NullPointerException: null
+	at org.syed.zoomdroid.AppTest.listElements(AppTest.java:239)
+	at org.syed.zoomdroid.AppTest.leftMenu(AppTest.java:285)
+
+leftMenu(org.syed.zoomdroid.AppTest)  Time elapsed: 15.071 sec  <<< FAILURE!
+java.lang.NullPointerException: null
+	at org.syed.zoomdroid.AppTest.listElements(AppTest.java:239)
+	at org.syed.zoomdroid.AppTest.leftMenu(AppTest.java:285)
+
+within24Booking(org.syed.zoomdroid.AppTest)  Time elapsed: 7.132 sec  <<< FAILURE!
+java.lang.NullPointerException: null
+	at org.syed.zoomdroid.AppTest.listElements(AppTest.java:239)
+	at org.syed.zoomdroid.AppTest.within24Booking(AppTest.java:143)
+

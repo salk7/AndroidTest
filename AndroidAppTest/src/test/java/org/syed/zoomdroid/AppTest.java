@@ -15,6 +15,7 @@ import java.util.concurrent.TimeUnit;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
@@ -23,7 +24,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -42,19 +43,22 @@ public class AppTest {
 		Proc = probuilder.start();
 
 		// System.out.println("-------------------------------------------------------");
-
 		System.out
 				.println("-----------------Appium server started-----------------");
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 	}
 
 	@BeforeTest
 	public void setUp() throws IOException, InterruptedException {
 		try {
+			System.out.println(GregorianCalendar.getInstance().getTime());
+			File apkFile = new File("./app_package/", "zoomcar.apk");
 			startAppiumServer();
 			System.out
 					.println("----------------------Test Started---------------------");
 			DesiredCapabilities capabilities = new DesiredCapabilities();
+			capabilities.setCapability("app", apkFile);
+			capabilities.setCapability("fullReset", false);
 			capabilities.setCapability("deviceName", "XiomiHM Note");
 			capabilities.setCapability(CapabilityType.VERSION, "4.4.2");
 			capabilities.setCapability("platformName", "Android");
@@ -63,19 +67,26 @@ public class AppTest {
 					"com.zoomcar.activity.SplashActivity");
 			driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"),
 					capabilities);
-			driver.manage().timeouts().implicitlyWait(5L, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(10L, TimeUnit.SECONDS);
+			driver.findElement(By.id("com.zoomcar:id/tvSkip")).click();
+			try {
+				driver.findElement(By.id("com.lbe.security.miui:id/accept"))
+						.click();
+			} catch (Exception e) {
+			}
+			listElements("com.zoomcar:id/textViewLocationName", "Bangalore",
+					false).click();
+			
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
-			System.out.println("Process destroyed");
 			Proc.destroy();
-
+			System.out.println("Process destroyed");
+			System.exit(0);
 		}
 		// System.out.println("...............Test service initialized...............");
 	}
 
 	public String[] lessThan24() {
-		// driver.startActivity("com.zoomcar",
-		// "com.zoomcar.activity.","com.zoomcar",driver.currentActivity());
 		String eDateTime, sDateTime;
 		// System.out.println("-------------------------------------------------------");
 
@@ -117,6 +128,15 @@ public class AppTest {
 		return dates;
 	}
 
+	@Test
+	public void findel() {
+		List<WebElement> date = driver.findElements(By
+				.className("android.widget.EditText"));
+		date.get(2).sendKeys("1972");
+		date.get(1).sendKeys("17");
+		date.get(0).sendKeys("Apr");
+	}
+
 	@Test(priority = 1, enabled = true)
 	public void within24Booking() throws InterruptedException {
 		try {
@@ -139,7 +159,7 @@ public class AppTest {
 		}
 		String sDay = String
 				.valueOf(Integer.parseInt(sDateTime.substring(2, 4)));
-		if (Integer.parseInt(sDay) > 24)
+		if (Integer.parseInt(sDay) > 22)
 			flag = true;
 		else
 			flag = false;
@@ -165,7 +185,7 @@ public class AppTest {
 		}
 		String eDay = String
 				.valueOf(Integer.parseInt(eDateTime.substring(2, 4)));
-		if (Integer.parseInt(eDay) > 24)
+		if (Integer.parseInt(eDay) > 22)
 			flag = true;
 		else
 			flag = false;
@@ -196,36 +216,40 @@ public class AppTest {
 
 	}
 
-	@Test(enabled = true)
-	public void locationName() throws Exception {
+	@DataProvider
+	public Object[][] getLocation() {
+		Object[][] data = { { "Bangalore", "1" }, { "Pune", "2" },
+				{ "Delhi NCR", "3" } };
+		return data;
+	}
+
+	// @Test(enabled = true,priority=0, dataProvider = "getLocation")
+	public void locationName(String id, String city) throws Exception {
 
 		WebElement LocMenu;
-		String cities[] = { "Bangalore", "Pune", "Delhi NCR" };
 		String locText = null;
 		clickonHome();
+		// Thread.sleep(2000);
 		LocMenu = driver.findElement(By
 				.id("com.zoomcar:id/textViewCityLocation"));
-		for (int i = 0; i < cities.length; i++) {
-			LocMenu.click();
-			listElements("com.zoomcar:id/textViewLocationName", cities[i],false).click();
-			swipeLR();
-			Thread.sleep(2000);
-			locText = LocMenu.getText();
-			Assert.assertEquals(locText, cities[i]);
-			// continue;
-		}
+		LocMenu.click();
+		listElements("com.zoomcar:id/textViewLocationName", city, false)
+				.click();
+		clickonHome();
+		locText = LocMenu.getText();
+		Assert.assertEquals(locText, city);
 		clickonHome();
 	}
 
 	public void swipeLR() throws InterruptedException {
-		Thread.sleep(1000);
+		// Thread.sleep(1000);
 		Dimension size = driver.manage().window().getSize();
 		int endx = (int) (size.width * 0.8);
 		int startx = (int) (size.width * 0.05);
 		int starty = size.height / 2;
 		driver.swipe(startx, starty, endx, starty, 200);
 		System.out.println("swipeRight");
-		Thread.sleep(1000);
+		// Thread.sleep(1000);
 	}
 
 	public WebElement listElements(String parentElement, String childElement,
@@ -242,13 +266,7 @@ public class AppTest {
 			}
 		}
 		System.out.println("clicking on :" + el.getText());
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return(el);
+		return (el);
 	}
 
 	// @Test()
@@ -265,40 +283,68 @@ public class AppTest {
 	@DataProvider
 	public Object[][] getData() {
 		Object[][] data = { { "Tariff", "Tariff Details" },
-				{ "Tariff", "Offers" }, { "Tariff", "Upcoming Peak Season" } ,
-				{"How It Works","How to Zoom"},{"How It Works","Zoom in Safety"}, 
-				{"How It Works", "Going Outstation"}, {"How It Works","FAQs"},
-				{"Policies","Fee Policy"},{"Policies","Eligibility"}, {"Policies","Privacy Policy"}
-				};
+				{ "Tariff", "Offers" }, { "Tariff", "Upcoming Peak Season" },
+				{ "How It Works", "How to Zoom" },
+				{ "How It Works", "Zoom in Safety" },
+				{ "How It Works", "Going Outstation" },
+				{ "How It Works", "FAQs" }, { "Policies", "Fee Policy" },
+				{ "Policies", "Eligibility" }, { "Policies", "Privacy Policy" } };
 		return data;
 	}
 
-	@Test(dataProvider = "getData", priority = 0)
+	// @Test(dataProvider = "getData", priority = 0)
 	public void leftMenu(String parentElementValue, String childElementValue)
 			throws InterruptedException {
 		WebElement webEl;
-		Thread.sleep(5000);
+		// Thread.sleep(5000);
 		clickonHome();
 		swipeLR();
 		try {
-			WebDriverWait wait = new WebDriverWait(driver, 5L);
-			wait.until(ExpectedConditions.presenceOfElementLocated(By.id("com.zoomcar:id/textViewMenuChild")));
-			webEl=listElements("com.zoomcar:id/textViewMenuChild", childElementValue,false);
-			Assert.assertEquals(childElementValue,webEl.getText());
+			WebDriverWait wait = new WebDriverWait(driver, 3L);
+			wait.until(ExpectedConditions.presenceOfElementLocated(By
+					.id("com.zoomcar:id/textViewMenuChild")));
+			webEl = listElements("com.zoomcar:id/textViewMenuChild",
+					childElementValue, false);
+			Assert.assertEquals(childElementValue, webEl.getText());
 			webEl.click();
 		} catch (Exception e) {
-			webEl=listElements("com.zoomcar:id/textViewMenuParent",parentElementValue, false);
-			Assert.assertEquals(parentElementValue,webEl.getText());
+			webEl = listElements("com.zoomcar:id/textViewMenuParent",
+					parentElementValue, false);
+			Assert.assertEquals(parentElementValue, webEl.getText());
 			webEl.click();
-			webEl=listElements("com.zoomcar:id/textViewMenuChild", childElementValue,false);
-			Assert.assertEquals(childElementValue,webEl.getText());
+			webEl = listElements("com.zoomcar:id/textViewMenuChild",
+					childElementValue, false);
+			Assert.assertEquals(childElementValue, webEl.getText());
 			webEl.click();
 		}
-	
-		
+
 	}
 
-	@AfterClass
+	@Test
+	public void profile() throws InterruptedException {
+		// Thread.sleep(5000);
+		driver.findElement(By.id("com.zoomcar:id/action_profile")).click();
+		driver.findElement(By.id("com.zoomcar:id/editTextEmail")).sendKeys(
+				"testing@zoomcar.com");
+		driver.findElement(By.id("com.zoomcar:id/editTextPassword")).sendKeys(
+				"password");
+		try {
+			driver.hideKeyboard();
+		} catch (Exception e) {
+		}
+		driver.findElement(By.id("com.zoomcar:id/ButtonSignUp")).click();
+		// if(!driver.findElement(By.className("android.widget.RelativeLayout")).isEnabled())
+		driver.findElement(By.id("com.zoomcar:id/action_profile")).click();
+		driver.findElement(By.id("com.zoomcar:id/action_profile")).click();
+		Assert.assertEquals("Email: testing@zoomcar.com",
+				driver.findElement(By.id("com.zoomcar:id/textViewUserPostal"))
+						.getText());
+		// driver.findElement(By.id("com.zoomcar:id/textSignUp")).click();
+		// driver.findElement(By.id("com.zoomcar:id/ImageViewClose")).click();
+		// driver.findElement(By.id("com.zoomcar:id/ImageViewClose")).click();
+	}
+
+	@AfterTest
 	public void tearDown() throws InterruptedException {
 		if (driver != null) {
 			driver.quit();
@@ -311,6 +357,7 @@ public class AppTest {
 			System.out
 					.println("--------------Appium server destroyed------------------");
 		}
+		System.out.println(GregorianCalendar.getInstance().getTime());
 		// Thread.sleep(10000);
 	}
 }

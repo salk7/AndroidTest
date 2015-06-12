@@ -6,11 +6,7 @@
 			<class name="org.syed.zoomdroid.AppTest" />
 		</classes>
 	</test>
-	<test name="Test2">
-		<classes>
-			<class name="org.syed.zoomdroid.AppTest" />
-		</classes>
-	</test>
+	
 
 	<!-- Test -->
 </suite> <!-- Suite -->
